@@ -1,22 +1,22 @@
 <?php
 
 namespace App;
-Use App\Address as Address;
-Use App\Consultant as Consultant;
 
 
 use Illuminate\Database\Eloquent\Model;
 
 class Curso extends Model
 {
-    protected $table = 'Cursos';
+    protected $table = 'cursos';
+
+    protected $dates = ['created_at', 'updated_at', 'start','finish'];
 
     public function Address()
     {
-        return $this->hasOne('Address', 'id', 'id_address');
+        return $this->hasOne('App\Address', 'id', 'id_address');
     }
     public function Consultant()
     {
-        return $this->hasOne('Consultant', 'id', 'id_consultant');
+        return $this->hasOne('App\Consultant', 'id', 'id_consultant');
     }
 }

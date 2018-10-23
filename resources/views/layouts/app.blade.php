@@ -15,23 +15,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/jquery.dataTables.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/mdb.css') }}" rel="stylesheet">
 </head>
 
 <body>
     <div id="app">
-    	<header>
-    		
-    	</header>
-    	
-        <main class="py-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" >
+        <main class="col-12 no-border" >
             @yield('content')
         </main>
-
-        <footer>
-        	
-        </footer>
     </div>
 </body>
 
@@ -40,4 +31,9 @@
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
     @yield('pagescript')
+    <style media="screen">
+        header{
+            background-color: #2196F3;
+        }
+    </style>
 </html>

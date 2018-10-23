@@ -13,7 +13,7 @@ class CreateCursoTable extends Migration
      */
     public function up()
     {
-        Schema::create('curso', function (Blueprint $table) {
+        Schema::create('cursos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
             $table->string('category');
@@ -21,10 +21,10 @@ class CreateCursoTable extends Migration
             $table->decimal('price',7,2);
 
             $table->integer('id_consultant')->unsigned()->index();
-            $table->foreign('id_consultant')->references('id')->on('consultant')->onDelete('cascade');;
+            $table->foreign('id_consultant')->references('id')->on('consultants')->onDelete('cascade');;
 
             $table->integer('id_address')->unsigned()->index();
-            $table->foreign('id_address')->references('id')->on('address')->onDelete('cascade');;
+            $table->foreign('id_address')->references('id')->on('addresses')->onDelete('cascade');;
 
             $table->timestamps();
         });
