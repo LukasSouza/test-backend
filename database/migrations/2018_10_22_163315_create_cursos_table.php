@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCursoTable extends Migration
+class CreateCursosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -19,6 +19,8 @@ class CreateCursoTable extends Migration
             $table->string('category');
             $table->text('description');
             $table->decimal('price',7,2);
+            $table->dateTime('start');
+            $table->dateTime('finish');
 
             $table->integer('id_consultant')->unsigned()->index();
             $table->foreign('id_consultant')->references('id')->on('consultants')->onDelete('cascade');;
