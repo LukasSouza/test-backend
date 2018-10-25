@@ -16,4 +16,4 @@
 // });
 
 Route::get('/', 'CursoController@index')->name('curso.index');
-Route::get('/{id}', 'CursoController@show')->name('curso.show');
+Route::get('/show/{id}', 'CursoController@show')->name('curso.show');

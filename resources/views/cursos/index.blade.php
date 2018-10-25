@@ -20,13 +20,12 @@
                     <p class="text-muted">{{$curso->Address->city}}</p>
                     <hr>
                     <p class="card-text float-left">{{$curso->start->format("d \d\\e F \d\\e Y")}}</p>
-                    <a href="{{route('curso.show', $curso->id)}}" class="float-right"><i class="material-icons">calendar_today</i></a>
+                    <a href="{{ route('curso.show', $curso->id) }}" class="float-right"><i class="material-icons">calendar_today</i></a>
                 </div>
             </div>
         @endforeach
     </div>
 </div>
-
 
 @endsection
 
